@@ -22,7 +22,11 @@ $(document).ready(function(){
 	shipList[2]=sweetName + "'s "  + shipList[1].substring(4,11);
 
 	// Demonstration of the replace method
+<<<<<<< HEAD
 	shipList[3]=shipList[1].replace("Revenge","Wrath");	
+=======
+	shipList[3]=shipList[1].replace("Revenge","Wrath");
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 
 	shipList[4]="The CSS "+sweetName;
 	shipList[5]="The Royal "+sweetName;
@@ -37,7 +41,11 @@ $(document).ready(function(){
 
 	var elOutput=document.getElementById("shipList");
 	elOutput.innerHTML="<ul>";
+<<<<<<< HEAD
 	for(i=0;i<shipList.length;i++){	
+=======
+	for(i=0;i<shipList.length;i++){
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 		elOutput.innerHTML+="<li>"+shipList[i]+"</li>";
 	}
 

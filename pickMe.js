@@ -2,7 +2,11 @@
  FILE NAME: ahoyJquery.js
  AUTHOR: Ryan Eades (RE)
  CREATE DATE: 30 October 2020
+<<<<<<< HEAD
  PURPOSE: jQuery code to demonstrate selection and attribute manipulation 
+=======
+ PURPOSE: jQuery code to demonstrate selection and attribute manipulation
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  MODIFICATION HISTORY:
  Original Build
 ***********************************/
@@ -10,14 +14,22 @@
 $(document).ready(function(){
 	// all button click events are linked to functions here
 	$('#tagSelect').click(showLinks);
+<<<<<<< HEAD
 	$('#classSelect1').click(greenMidshipmen);	
+=======
+	$('#classSelect1').click(greenMidshipmen);
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	$('#classSelect2').click(blueWrdrm);
 	$('#idSelect').click(displayCoxswainInfo);
 	$('#multiInstruct').click(crazyCapn);
 	$('#tagFilter').click(removeHighlight);
 	$('#classFilter').click(italicWrdrm);
 	$('#idFilter').click(resetCaptain);
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	// this function selects by tag, adding a link to all the list item elements
 	function showLinks(){
 		$("li").append("(<a href='https://en.wikipedia.org/wiki/Seafarer%27s_professions_and_ranks'>More Info</a>)");
@@ -33,7 +45,11 @@ $(document).ready(function(){
 		$(".midshipmen").css("color","green").attr("title","highlighted");
 	} // end blueWrdrm
 
+<<<<<<< HEAD
 	// this function selects the coxswain by id and adds some text 
+=======
+	// this function selects the coxswain by id and adds some text
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	function displayCoxswainInfo(){
 		$("#coxswain").append(": The steersman of a ship's boat, lifeboat, racing boat, or other boat.");
 	} // end displayCoxswainInfo
@@ -47,7 +63,11 @@ $(document).ready(function(){
 			'font-size':'1000%',
 			'font-style':'italic'
 		});
+<<<<<<< HEAD
 	} // end crazyCapn 
+=======
+	} // end crazyCapn
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 
 	// this function filters by tag, setting all the 'highlighted' titled list items back to default color values and removing their titles
 	function removeHighlight(){
@@ -58,7 +78,11 @@ $(document).ready(function(){
 	function italicWrdrm(){
 		$(".wrdRm:nth-child(even)").css("font-style","italic");
 	} // end italicMidshipmen
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	// this function selects the element with id of captain only if it has a title of crazy and resets all attributes to default values
 	function resetCaptain(){
 		$('#captain[title="crazy"]').removeAttr("crazy").css({"background-image":"",

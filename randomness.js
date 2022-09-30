@@ -22,7 +22,11 @@ function Pirate(rank, name, id){
 /***********
 Name: speak
 Purpose: posts the pirate's message to its div element
+<<<<<<< HEAD
 no return values. 
+=======
+no return values.
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 Parameters: the pirate's phrase
 *****/
 	this.speak = function(phrase){
@@ -31,11 +35,19 @@ Parameters: the pirate's phrase
 	}; // end speak
 
 
+<<<<<<< HEAD
 /************** 
 NAME: number
    Purpose: Sets the pirate's number to be a random number
    No parameters. Returns the pirate's number. 
 **************/	
+=======
+/**************
+NAME: number
+   Purpose: Sets the pirate's number to be a random number
+   No parameters. Returns the pirate's number.
+**************/
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	this.number = function(){
 
 		return Math.floor(Math.random()*10)+1;
@@ -77,7 +89,11 @@ function winTest(){
 
 	if(win==0){
 		cpnSparrow.speak("I be the champion!!")
+<<<<<<< HEAD
 	}; // end if 
+=======
+	}; // end if
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 
 }; // end winTest
 
@@ -93,4 +109,7 @@ timeout=setTimeout(function(){
 
 
 });   // end document.ready
+<<<<<<< HEAD
 
+=======
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51

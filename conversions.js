@@ -7,7 +7,11 @@
  Original Build
 ***********************************/
 // This function is a jquery wrapper for javascript
+<<<<<<< HEAD
 $(document).ready(function(){  
+=======
+$(document).ready(function(){
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 
 var strName = "";
 var strQuestion = "What be y'ere name, eh?";

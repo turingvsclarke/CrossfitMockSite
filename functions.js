@@ -2,12 +2,17 @@
  FILE NAME: functions.js
  AUTHOR: Ryan Eades (RE)
  CREATE DATE: 22 January 2021
+<<<<<<< HEAD
  PURPOSE: Function that will output some orders form the Captain to the html page 
+=======
+ PURPOSE: Function that will output some orders form the Captain to the html page
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  MODIFICATION HISTORY:
  Original Build
 ***********************************/
 // This function is a jquery wrapper for javascript
 $(document).ready(function(){
+<<<<<<< HEAD
 	
 	/***function purpose: output a string concatenated with two numbers to a passed div id
  		parameters:div id, number, string 1, string 2
@@ -16,6 +21,16 @@ $(document).ready(function(){
 	function order(id,number,str1,str2){
 		elOutput=document.getElementById(id);
 		elOutput.textContent+=str1 + " " + number + " " + str2;		
+=======
+
+	/***function purpose: output a string concatenated with two numbers to a passed div id
+ 		parameters:div id, number, string 1, string 2
+		no return values. outputs to page within function
+	***/
+	function order(id,number,str1,str2){
+		elOutput=document.getElementById(id);
+		elOutput.textContent+=str1 + " " + number + " " + str2;
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	}
 
 	order("call1",Math.floor(Math.random()*100),"We need ","barrels of rum, stat!");

@@ -7,7 +7,11 @@
  Original Build
 ***********************************/
 // This function is a jquery wrapper for javascript
+<<<<<<< HEAD
 $(document).ready(function(){  
+=======
+$(document).ready(function(){
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 
 var input = prompt("Did you arrive to port on time?(Yes/No)");
 input = input.toUpperCase();
@@ -32,4 +36,8 @@ switch (input) {
 var el= document.getElementById("message");
 el.textContent = output;
 
+<<<<<<< HEAD
 }); // end .ready function
+=======
+}); // end .ready function
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51

@@ -38,7 +38,11 @@ $(document).ready(function(){
                         for(var i=0;i<intPlaceHolders;i++){
                                 strBin = "0"+strBin;
                 }
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
         }
 		return strBin;
 	}
@@ -47,7 +51,11 @@ $(document).ready(function(){
 	var binaryArray = binaryInput.split("");
 	var elOutput=document.getElementById("booleanOutput");
 
+<<<<<<< HEAD
 	for(i=0;i<binaryArray.length;i++){	
+=======
+	for(i=0;i<binaryArray.length;i++){
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 		if(parseInt(binaryArray[i]))
 			elOutput.textContent+="true";
 		else

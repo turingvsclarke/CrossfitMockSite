@@ -2,14 +2,22 @@
  FILE NAME: buttons.js
  AUTHOR: Ryan Eades (RE)
  CREATE DATE: 04 October 2020
+<<<<<<< HEAD
  PURPOSE: Code with functions to be triggered with our five buttons 
+=======
+ PURPOSE: Code with functions to be triggered with our five buttons
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  MODIFICATION HISTORY:
  Original Build
 ***********************************/
 // This function is a jquery wrapper for javascript
 $(document).ready(function(){
 	var shipList=[];
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	var btn1=document.getElementById("b1");
 	var btn2=document.getElementById("b2");
 	var btn3=document.getElementById("b3");
@@ -19,7 +27,11 @@ $(document).ready(function(){
 
 	function battle(id,str1,number,str2){
 		elOutput=document.getElementById(id);
+<<<<<<< HEAD
 		elOutput.textContent=str1 + " " + number + " " + str2;		
+=======
+		elOutput.textContent=str1 + " " + number + " " + str2;
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	}
 
 	btn1.onclick=function(){
@@ -33,7 +45,11 @@ $(document).ready(function(){
 	btn3.addEventListener("click",function(){
 		battle("call3","Haul in the haulyards and fix those",9,"ropes to the mizzen mast");
 	},false);
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	btn4.addEventListener("click",function(){
 		battle("call4","Launch",3,"cannonballs portside");
 	},false);

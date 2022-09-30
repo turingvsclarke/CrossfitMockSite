@@ -2,7 +2,11 @@
  FILE NAME: moversShakers.js
  AUTHOR: Ryan Eades (RE)
  CREATE DATE: 03 November 2020
+<<<<<<< HEAD
  PURPOSE: jQuery code to fire effects when buttons are pressed 
+=======
+ PURPOSE: jQuery code to fire effects when buttons are pressed
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  MODIFICATION HISTORY:
  Original Build
 ***********************************/
@@ -11,7 +15,11 @@ $(document).ready(function(){
 
 	// all button click events are linked to functions here
 	$('#hide').click(hideShip);
+<<<<<<< HEAD
 	$('#show').click(showShip);	
+=======
+	$('#show').click(showShip);
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	$('#toggle').click(toggleShip);
 	$('#slideUp').click(slideUpShip);
 	$('#slideDown').click(slideDownShip);
@@ -46,7 +54,11 @@ $(document).ready(function(){
 
 
 	/********Multiple parameters************/
+<<<<<<< HEAD
 	// this function takes 3 seconds to fade the target out of view 
+=======
+	// this function takes 3 seconds to fade the target out of view
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	function fadeOutShip(){
 		$("#target").fadeOut(3000,"linear",function(){$('#target').fadeIn()});
 	} // end fadeOut

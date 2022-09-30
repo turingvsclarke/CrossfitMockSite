@@ -1,13 +1,23 @@
 /**************************************
+<<<<<<< HEAD
  TITLE: moreIfs.js							
  AUTHOR: Ryan Eades (RE)			
  PURPOSE: Handle user input and use if/else and switch statements to post a response		
+=======
+ TITLE: moreIfs.js
+ AUTHOR: Ryan Eades (RE)
+ PURPOSE: Handle user input and use if/else and switch statements to post a response
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  DATE: 23 September 2020
  MODIFICATION HISTORY:
  ORIGINAL BUILD
 ***************************************/
 // This function is a jquery wrapper for javascript
+<<<<<<< HEAD
 $(document).ready(function(){  
+=======
+$(document).ready(function(){
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 
 var intCurrentLatitude=0;
 var intCurrentLongitude=0;

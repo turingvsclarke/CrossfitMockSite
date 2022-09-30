@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 <!doctype html>
 
 <!--
@@ -9,17 +5,10 @@ TITLE: Ryan Eades's awesome website for success!
 AUTHOR: Ryan Eades (RE)
 PURPOSE: Class Index Page to Host Lab Work for N341
 NOTE: Based on template provided by instructor
-<<<<<<< HEAD
 MODIFICATION HISTORY: 
 08/28/2020: Create date (RE)
 08/28/2020: Added link for testFile1, removed link to javascript file (RE)
 09/03/2020: Added link to "IDed and Styled" project (RE) 
-=======
-MODIFICATION HISTORY:
-08/28/2020: Create date (RE)
-08/28/2020: Added link for testFile1, removed link to javascript file (RE)
-09/03/2020: Added link to "IDed and Styled" project (RE)
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 09/03/2020: Added link to js HelloWorld project (RE)
 09/06/2020: Added link to multiwrites project (RE)
 09/07/2020: Added link to confessions project (RE)
@@ -35,11 +24,7 @@ MODIFICATION HISTORY:
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<<<<<<< HEAD
     
-=======
-
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 <title>N341 Student Course Page</title>
 
 <!-- This css provides the colors and formatting for the page.
@@ -123,7 +108,6 @@ hr{						/* Define the formatting for the <hr /> line between "Course Work" and 
 	<div id="assignments">
 		<h3> Course Work </h3>
 		<hr/> <!-- Draw a horizontal line with formatting defined by css -->
-<<<<<<< HEAD
  
 		<ul align="center">  <!-- Beginning of unordered list -->
 		
@@ -133,17 +117,6 @@ hr{						/* Define the formatting for the <hr /> line between "Course Work" and 
 			
 			<li>
 				<a href="simplePirate.html">IDed & Styled</a>	
-=======
-
-		<ul align="center">  <!-- Beginning of unordered list -->
-
-			<li>  <!-- Start of first list item -->
-				<a href="testFile1.html">Test File</a>  <!-- link to the Test File To Launch Our N341 Journey -->
-			</li>  <!-- End of first list item -->
-
-			<li>
-				<a href="simplePirate.html">IDed & Styled</a>
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 			</li>
 			<li>
 				<a href="helloWorld.html">Hello World</a>
@@ -189,15 +162,9 @@ hr{						/* Define the formatting for the <hr /> line between "Course Work" and 
 				<a href="triggered.html">Triggered!</a>
 			</li>
 			<li>
-<<<<<<< HEAD
 				<a href="finalProject/finalIndex.html">Final Project</a>	
 			</li>
 		</ul>	 
-=======
-				<a href="finalProject/finalIndex.html">Final Project</a>
-			</li>
-		</ul>
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	</div><!-- end div id="assignments" -->
 </body>
 </html>

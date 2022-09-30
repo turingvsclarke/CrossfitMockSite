@@ -4,22 +4,37 @@
  CREATE DATE: 30 April 2021
  PURPOSE: Redo form scraping using js variables. Make all fields required.
  MODIFICATION HISTORY:
+<<<<<<< HEAD
  Copied customValidation.js 
+=======
+ Copied customValidation.js
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  Rewrote form scraping using variables
  Rewrote form output using jQuery .append() rather than javaScript
  Fixed output of checkboxes to show autocomplete field
  Made all fields simply required
 ***********************************/
 $(document).ready(function(){
+<<<<<<< HEAD
  
 $.validator.setDefaults({
   
+=======
+
+$.validator.setDefaults({
+
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
     // We use jquery selection to output form info to a designated area, provided the rules we've set for each input value are followed
     submitHandler: function() {
 
 	/////////// FORM SCRAPING //////////////////////
+<<<<<<< HEAD
 	
 	$("#outputArea").text("");	
+=======
+
+	$("#outputArea").text("");
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 
         // Get the users username
         var memberLogin = $("#userEmail").val();
@@ -45,12 +60,20 @@ $.validator.setDefaults({
         var classType = $("#selectmenu").val();
         // Get the athlete's level
         var athleteLevel = $('input[name="athleteLevel"]:checked').val();
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
         // Find all the different ways they may have contacted us, excluding any "Other Reason"
         $("#userData").find('input[name="referralMethod"][id!="checkbox-4"]:checked').each(function(){
           reasonForVisit+="<li>" + $("label[for='"+$(this).attr("id")+"']").text() + "</li>";
         }); // end each
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
         // Add on the other reason for visiting if it exists
         $("#userData").find('#checkbox-4:checked').each(function(){
              reasonForVisit+="<li>" + $("label[for='"+$(this).attr("id")+"']").text() + " " + moreReason + "</li>";
@@ -74,7 +97,11 @@ $.validator.setDefaults({
       }, // end submitHandler
 
       ///////////// ERROR PLACEMENT //////////////////////////////
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
       errorPlacement: function(error, element){
   	// Put the referral method message after the question, not after each individual option
         if (element.attr("name")=="referralMethod"){
@@ -94,9 +121,15 @@ $.validator.setDefaults({
 	  error.insertAfter(element);
 	}
       } // end errorPlacement
+<<<<<<< HEAD
  
     }); // end setDefaults
     
+=======
+
+    }); // end setDefaults
+
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	//////////////// VALIDATION //////////////////////////////////////////
 	/***
 	Function Name: Validate
@@ -137,22 +170,38 @@ $.validator.setDefaults({
           		required: true,
           		phoneUS: true
         	},
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
         	email: {
 			required: true,
           		email: true
         		},
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
       		// have them check at least one way they heard of the box
         	referralMethod: {
            		required: true
         		},
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
       		// if they checked 'Other', the other field is required
         	otherReason: {
           		required: "#checkbox-4:checked"
         		},
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
         	crossfitExperience: {
           		required: true,
           		max: 20
@@ -161,7 +210,11 @@ $.validator.setDefaults({
         	datePicker: {
          		required: true
         		},
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
         }, // end rules
         messages: {
         	memberEmail: {
@@ -170,7 +223,11 @@ $.validator.setDefaults({
 
 		memberPassword: {
 			required: "Please enter your password"
+<<<<<<< HEAD
 		}, 
+=======
+		},
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
             	firstName: {
             		required: "Please let us know what to call you. Returning member? Sign in above"
             	},
@@ -178,11 +235,16 @@ $.validator.setDefaults({
 		lastName: {
           		required: "Please enter your last name"
         	},
+<<<<<<< HEAD
      
+=======
+
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
         	phone: {
           		required: "Please enter your phone number in case of class cancellation/closure",
           		phoneUS: "Please follow the format for a valid US phone number"
         	},
+<<<<<<< HEAD
  
         	email: {
           		email: "Please follow the placeholder for valid email format"
@@ -200,11 +262,37 @@ $.validator.setDefaults({
           		required: "Let us know how you found us!",
         	},
  
+=======
+
+        	email: {
+          		email: "Please follow the placeholder for valid email format"
+        	},
+
+        	datePicker: {
+          		required: "Please select a date for your class"
+        	},
+
+        	referralMethod: {
+          		required: "Please tell us how we reached you"
+        	},
+
+        	otherReason: {
+          		required: "Let us know how you found us!",
+        	},
+
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
         	crossfitExperience: {
           		required: "Please help us cater your experience to your skill level",
           		min: $.validator.format("Please honestly tell us how long you've been doing Crossfit(it's only been around 20 years)")
         	}
+<<<<<<< HEAD
         
         } // end messages
     }); // end validate 
 }); // end document.ready
+=======
+
+        } // end messages
+    }); // end validate
+}); // end document.ready
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51

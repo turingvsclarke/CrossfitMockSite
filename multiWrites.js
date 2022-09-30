@@ -7,7 +7,11 @@
  Original Build
 ***********************************/
 // This function is a jquery wrapper for javascript
+<<<<<<< HEAD
 $(document).ready(function(){  
+=======
+$(document).ready(function(){
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 
 var strMessage = "Me and me crew been in Pure Mathematics since before ye could even think to grow a beard";
 var elOutput = document.getElementById("textContent");
@@ -18,4 +22,8 @@ var elOutput1 = document.getElementById("innerHTML");
 elOutput1.innerHTML = strMessage1;
 
 
+<<<<<<< HEAD
 }); // end .ready function
+=======
+}); // end .ready function
+>>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
