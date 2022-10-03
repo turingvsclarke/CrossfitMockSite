@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-/*! jQuery UI - v1.12.1 - 2021-02-01
-* http://jqueryui.com
-* Includes: widget.js, position.js, data.js, disable-selection.js, focusable.js, form-reset-mixin.js, jquery-1-7.js, keycode.js, labels.js, scroll-parent.js, tabbable.js, unique-id.js, widgets/draggable.js, widgets/droppable.js, widgets/resizable.js, widgets/selectable.js, widgets/sortable.js, widgets/accordion.js, widgets/autocomplete.js, widgets/button.js, widgets/checkboxradio.js, widgets/controlgroup.js, widgets/datepicker.js, widgets/dialog.js, widgets/menu.js, widgets/mouse.js, widgets/progressbar.js, widgets/selectmenu.js, widgets/slider.js, widgets/spinner.js, widgets/tabs.js, widgets/tooltip.js, effect.js, effects/effect-blind.js, effects/effect-bounce.js, effects/effect-clip.js, effects/effect-drop.js, effects/effect-explode.js, effects/effect-fade.js, effects/effect-fold.js, effects/effect-highlight.js, effects/effect-puff.js, effects/effect-pulsate.js, effects/effect-scale.js, effects/effect-shake.js, effects/effect-size.js, effects/effect-slide.js, effects/effect-transfer.js
-* Copyright jQuery Foundation and other contributors; Licensed MIT */
-
-(function( factory ) {
-	if ( typeof define === "function" && define.amd ) {
-
-		// AMD. Register as an anonymous module.
-		define([ "jquery" ], factory );
-=======
 /*! jQuery UI - v1.13.1 - 2022-06-27
 * http://jqueryui.com
 * Includes: widget.js, position.js, data.js, disable-selection.js, focusable.js, form-reset-mixin.js, jquery-patch.js, keycode.js, labels.js, scroll-parent.js, tabbable.js, unique-id.js, widgets/draggable.js, widgets/droppable.js, widgets/resizable.js, widgets/selectable.js, widgets/sortable.js, widgets/accordion.js, widgets/autocomplete.js, widgets/button.js, widgets/checkboxradio.js, widgets/controlgroup.js, widgets/datepicker.js, widgets/dialog.js, widgets/menu.js, widgets/mouse.js, widgets/progressbar.js, widgets/selectmenu.js, widgets/slider.js, widgets/spinner.js, widgets/tabs.js, widgets/tooltip.js, effect.js, effects/effect-blind.js, effects/effect-bounce.js, effects/effect-clip.js, effects/effect-drop.js, effects/effect-explode.js, effects/effect-fade.js, effects/effect-fold.js, effects/effect-highlight.js, effects/effect-puff.js, effects/effect-pulsate.js, effects/effect-scale.js, effects/effect-shake.js, effects/effect-size.js, effects/effect-slide.js, effects/effect-transfer.js
@@ -22,23 +10,12 @@
 
 		// AMD. Register as an anonymous module.
 		define( [ "jquery" ], factory );
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	} else {
 
 		// Browser globals
 		factory( jQuery );
 	}
-<<<<<<< HEAD
-}(function( $ ) {
 
-$.ui = $.ui || {};
-
-var version = $.ui.version = "1.12.1";
-
-
-/*!
- * jQuery UI Widget 1.12.1
-=======
 } )( function( $ ) {
 "use strict";
 
@@ -63,39 +40,19 @@ var version = $.ui.version = "1.13.1";
 //>>docs: http://api.jqueryui.com/jQuery.widget/
 //>>demos: http://jqueryui.com/widget/
 
-
-<<<<<<< HEAD
-
-var widgetUuid = 0;
-=======
 var widgetUuid = 0;
 var widgetHasOwnProperty = Array.prototype.hasOwnProperty;
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 var widgetSlice = Array.prototype.slice;
 
 $.cleanData = ( function( orig ) {
 	return function( elems ) {
 		var events, elem, i;
 		for ( i = 0; ( elem = elems[ i ] ) != null; i++ ) {
-<<<<<<< HEAD
-			try {
-
-				// Only trigger remove when necessary to save time
-				events = $._data( elem, "events" );
-				if ( events && events.remove ) {
-					$( elem ).triggerHandler( "remove" );
-				}
-
-			// Http://bugs.jquery.com/ticket/8235
-			} catch ( e ) {}
-=======
-
 			// Only trigger remove when necessary to save time
 			events = $._data( elem, "events" );
 			if ( events && events.remove ) {
 				$( elem ).triggerHandler( "remove" );
 			}
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 		}
 		orig( elems );
 	};
@@ -117,20 +74,12 @@ $.widget = function( name, base, prototype ) {
 		base = $.Widget;
 	}
 
-<<<<<<< HEAD
-	if ( $.isArray( prototype ) ) {
-=======
 	if ( Array.isArray( prototype ) ) {
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 		prototype = $.extend.apply( null, [ {} ].concat( prototype ) );
 	}
 
 	// Create selector for plugin
-<<<<<<< HEAD
-	$.expr[ ":" ][ fullName.toLowerCase() ] = function( elem ) {
-=======
 	$.expr.pseudos[ fullName.toLowerCase() ] = function( elem ) {
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 		return !!$.data( elem, fullName );
 	};
 
@@ -139,11 +88,7 @@ $.widget = function( name, base, prototype ) {
 	constructor = $[ namespace ][ name ] = function( options, element ) {
 
 		// Allow instantiation without "new" keyword
-<<<<<<< HEAD
-		if ( !this._createWidget ) {
-=======
 		if ( !this || !this._createWidget ) {
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 			return new constructor( options, element );
 		}
 
@@ -174,11 +119,7 @@ $.widget = function( name, base, prototype ) {
 	// inheriting from
 	basePrototype.options = $.widget.extend( {}, basePrototype.options );
 	$.each( prototype, function( prop, value ) {
-<<<<<<< HEAD
-		if ( !$.isFunction( value ) ) {
-=======
 		if ( typeof value !== "function" ) {
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 			proxiedPrototype[ prop ] = value;
 			return;
 		}
@@ -257,11 +198,7 @@ $.widget.extend = function( target ) {
 	for ( ; inputIndex < inputLength; inputIndex++ ) {
 		for ( key in input[ inputIndex ] ) {
 			value = input[ inputIndex ][ key ];
-<<<<<<< HEAD
-			if ( input[ inputIndex ].hasOwnProperty( key ) && value !== undefined ) {
-=======
 			if ( widgetHasOwnProperty.call( input[ inputIndex ], key ) && value !== undefined ) {
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 
 				// Clone objects
 				if ( $.isPlainObject( value ) ) {
@@ -310,12 +247,8 @@ $.widget.bridge = function( name, object ) {
 							"attempted to call method '" + options + "'" );
 					}
 
-<<<<<<< HEAD
-					if ( !$.isFunction( instance[ options ] ) || options.charAt( 0 ) === "_" ) {
-=======
 					if ( typeof instance[ options ] !== "function" ||
 						options.charAt( 0 ) === "_" ) {
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 						return $.error( "no such method '" + options + "' for " + name +
 							" widget instance" );
 					}
@@ -576,8 +509,6 @@ $.Widget.prototype = {
 			classes: this.options.classes || {}
 		}, options );
 
-<<<<<<< HEAD
-=======
 		function bindRemoveEvent() {
 			var nodesToBind = [];
 
@@ -599,18 +530,13 @@ $.Widget.prototype = {
 			} );
 		}
 
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 		function processClassString( classes, checkOption ) {
 			var current, i;
 			for ( i = 0; i < classes.length; i++ ) {
 				current = that.classesElementLookup[ classes[ i ] ] || $();
 				if ( options.add ) {
-<<<<<<< HEAD
-					current = $( $.unique( current.get().concat( options.element.get() ) ) );
-=======
 					bindRemoveEvent();
 					current = $( $.uniqueSort( current.get().concat( options.element.get() ) ) );
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 				} else {
 					current = $( current.not( options.element ).get() );
 				}
@@ -622,13 +548,6 @@ $.Widget.prototype = {
 			}
 		}
 
-<<<<<<< HEAD
-		this._on( options.element, {
-			"remove": "_untrackClassesElement"
-		} );
-
-=======
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 		if ( options.keys ) {
 			processClassString( options.keys.match( /\S+/g ) || [], true );
 		}
@@ -646,11 +565,7 @@ $.Widget.prototype = {
 				that.classesElementLookup[ key ] = $( value.not( event.target ).get() );
 			}
 		} );
-<<<<<<< HEAD
-=======
-
 		this._off( $( event.target ) );
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	},
 
 	_removeClass: function( element, keys, extra ) {
@@ -731,11 +646,7 @@ $.Widget.prototype = {
 	_off: function( element, eventName ) {
 		eventName = ( eventName || "" ).split( " " ).join( this.eventNamespace + " " ) +
 			this.eventNamespace;
-<<<<<<< HEAD
-		element.off( eventName ).off( eventName );
-=======
 		element.off( eventName );
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 
 		// Clear the stack to avoid memory leaks (#10056)
 		this.bindings = $( this.bindings.not( element ).get() );
@@ -801,11 +712,7 @@ $.Widget.prototype = {
 		}
 
 		this.element.trigger( event, data );
-<<<<<<< HEAD
-		return !( $.isFunction( callback ) &&
-=======
 		return !( typeof callback === "function" &&
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 			callback.apply( this.element[ 0 ], [ event ].concat( data ) ) === false ||
 			event.isDefaultPrevented() );
 	}
@@ -827,11 +734,8 @@ $.each( { show: "fadeIn", hide: "fadeOut" }, function( method, defaultEffect ) {
 		options = options || {};
 		if ( typeof options === "number" ) {
 			options = { duration: options };
-<<<<<<< HEAD
-=======
 		} else if ( options === true ) {
 			options = {};
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 		}
 
 		hasOptions = !$.isEmptyObject( options );
@@ -861,11 +765,7 @@ var widget = $.widget;
 
 
 /*!
-<<<<<<< HEAD
- * jQuery UI Position 1.12.1
-=======
  * jQuery UI Position 1.13.1
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -904,13 +804,10 @@ function parseCss( element, property ) {
 	return parseInt( $.css( element, property ), 10 ) || 0;
 }
 
-<<<<<<< HEAD
-=======
 function isWindow( obj ) {
 	return obj != null && obj === obj.window;
 }
 
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 function getDimensions( elem ) {
 	var raw = elem[ 0 ];
 	if ( raw.nodeType === 9 ) {
@@ -920,11 +817,7 @@ function getDimensions( elem ) {
 			offset: { top: 0, left: 0 }
 		};
 	}
-<<<<<<< HEAD
-	if ( $.isWindow( raw ) ) {
-=======
 	if ( isWindow( raw ) ) {
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 		return {
 			width: elem.width(),
 			height: elem.height(),
@@ -951,15 +844,10 @@ $.position = {
 			return cachedScrollbarWidth;
 		}
 		var w1, w2,
-<<<<<<< HEAD
-			div = $( "<div " +
-				"style='display:block;position:absolute;width:50px;height:50px;overflow:hidden;'>" +
-				"<div style='height:100px;width:auto;'></div></div>" ),
-=======
+
 			div = $( "<div style=" +
 				"'display:block;position:absolute;width:200px;height:200px;overflow:hidden;'>" +
 				"<div style='height:300px;width:auto;'></div></div>" ),
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 			innerDiv = div.children()[ 0 ];
 
 		$( "body" ).append( div );
@@ -992,21 +880,13 @@ $.position = {
 	},
 	getWithinInfo: function( element ) {
 		var withinElement = $( element || window ),
-<<<<<<< HEAD
-			isWindow = $.isWindow( withinElement[ 0 ] ),
-			isDocument = !!withinElement[ 0 ] && withinElement[ 0 ].nodeType === 9,
-			hasOffset = !isWindow && !isDocument;
-		return {
-			element: withinElement,
-			isWindow: isWindow,
-=======
+
 			isElemWindow = isWindow( withinElement[ 0 ] ),
 			isDocument = !!withinElement[ 0 ] && withinElement[ 0 ].nodeType === 9,
 			hasOffset = !isElemWindow && !isDocument;
 		return {
 			element: withinElement,
 			isWindow: isElemWindow,
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 			isDocument: isDocument,
 			offset: hasOffset ? $( element ).offset() : { left: 0, top: 0 },
 			scrollLeft: withinElement.scrollLeft(),
@@ -1026,16 +906,12 @@ $.fn.position = function( options ) {
 	options = $.extend( {}, options );
 
 	var atOffset, targetWidth, targetHeight, targetOffset, basePosition, dimensions,
-<<<<<<< HEAD
-		target = $( options.of ),
-=======
 
 		// Make sure string options are treated as CSS selectors
 		target = typeof options.of === "string" ?
 			$( document ).find( options.of ) :
 			$( options.of ),
 
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 		within = $.position.getWithinInfo( options.within ),
 		scrollInfo = $.position.getScrollInfo( within ),
 		collision = ( options.collision || "flip" ).split( " " ),
@@ -1388,11 +1264,7 @@ var position = $.ui.position;
 
 
 /*!
-<<<<<<< HEAD
- * jQuery UI :data 1.12.1
-=======
  * jQuery UI :data 1.13.1
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1406,11 +1278,7 @@ var position = $.ui.position;
 //>>docs: http://api.jqueryui.com/data-selector/
 
 
-<<<<<<< HEAD
-var data = $.extend( $.expr[ ":" ], {
-=======
 var data = $.extend( $.expr.pseudos, {
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	data: $.expr.createPseudo ?
 		$.expr.createPseudo( function( dataName ) {
 			return function( elem ) {
@@ -1425,11 +1293,7 @@ var data = $.extend( $.expr.pseudos, {
 } );
 
 /*!
-<<<<<<< HEAD
- * jQuery UI Disable Selection 1.12.1
-=======
  * jQuery UI Disable Selection 1.13.1
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1444,10 +1308,6 @@ var data = $.extend( $.expr.pseudos, {
 
 // This file is deprecated
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 var disableSelection = $.fn.extend( {
 	disableSelection: ( function() {
 		var eventType = "onselectstart" in document.createElement( "div" ) ?
@@ -1468,11 +1328,7 @@ var disableSelection = $.fn.extend( {
 
 
 /*!
-<<<<<<< HEAD
- * jQuery UI Focusable 1.12.1
-=======
  * jQuery UI Focusable 1.13.1
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1485,11 +1341,6 @@ var disableSelection = $.fn.extend( {
 //>>description: Selects elements which can be focused.
 //>>docs: http://api.jqueryui.com/focusable-selector/
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 // Selectors
 $.ui.focusable = function( element, hasTabindex ) {
 	var map, mapName, img, focusableIfVisible, fieldset,
@@ -1536,17 +1387,11 @@ function visible( element ) {
 		element = element.parent();
 		visibility = element.css( "visibility" );
 	}
-<<<<<<< HEAD
-	return visibility !== "hidden";
-}
 
-$.extend( $.expr[ ":" ], {
-=======
 	return visibility === "visible";
 }
 
 $.extend( $.expr.pseudos, {
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	focusable: function( element ) {
 		return $.ui.focusable( element, $.attr( element, "tabindex" ) != null );
 	}
@@ -1555,29 +1400,17 @@ $.extend( $.expr.pseudos, {
 var focusable = $.ui.focusable;
 
 
-
-<<<<<<< HEAD
-
-// Support: IE8 Only
-// IE8 does not support the form attribute and when it is supplied. It overwrites the form prop
-// with a string, so we need to find the proper form.
-var form = $.fn.form = function() {
-=======
 // Support: IE8 Only
 // IE8 does not support the form attribute and when it is supplied. It overwrites the form prop
 // with a string, so we need to find the proper form.
 var form = $.fn._form = function() {
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	return typeof this[ 0 ].form === "string" ? this.closest( "form" ) : $( this[ 0 ].form );
 };
 
 
 /*!
-<<<<<<< HEAD
- * jQuery UI Form Reset Mixin 1.12.1
-=======
+
  * jQuery UI Form Reset Mixin 1.13.1
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1590,11 +1423,6 @@ var form = $.fn._form = function() {
 //>>description: Refresh input widgets when their form is reset
 //>>docs: http://api.jqueryui.com/form-reset-mixin/
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 var formResetMixin = $.ui.formResetMixin = {
 	_formResetHandler: function() {
 		var form = $( this );
@@ -1609,11 +1437,7 @@ var formResetMixin = $.ui.formResetMixin = {
 	},
 
 	_bindFormResetHandler: function() {
-<<<<<<< HEAD
-		this.form = this.element.form();
-=======
 		this.form = this.element._form();
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 		if ( !this.form.length ) {
 			return;
 		}
@@ -1647,11 +1471,7 @@ var formResetMixin = $.ui.formResetMixin = {
 
 
 /*!
-<<<<<<< HEAD
- * jQuery UI Support for jQuery core 1.7.x 1.12.1
-=======
  * jQuery UI Support for jQuery core 1.8.x and newer 1.13.1
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1660,74 +1480,7 @@ var formResetMixin = $.ui.formResetMixin = {
  *
  */
 
-<<<<<<< HEAD
-//>>label: jQuery 1.7 Support
-//>>group: Core
-//>>description: Support version 1.7.x of jQuery core
 
-
-
-// Support: jQuery 1.7 only
-// Not a great way to check versions, but since we only support 1.7+ and only
-// need to detect <1.8, this is a simple check that should suffice. Checking
-// for "1.7." would be a bit safer, but the version string is 1.7, not 1.7.0
-// and we'll never reach 1.70.0 (if we do, we certainly won't be supporting
-// 1.7 anymore). See #11197 for why we're not using feature detection.
-if ( $.fn.jquery.substring( 0, 3 ) === "1.7" ) {
-
-	// Setters for .innerWidth(), .innerHeight(), .outerWidth(), .outerHeight()
-	// Unlike jQuery Core 1.8+, these only support numeric values to set the
-	// dimensions in pixels
-	$.each( [ "Width", "Height" ], function( i, name ) {
-		var side = name === "Width" ? [ "Left", "Right" ] : [ "Top", "Bottom" ],
-			type = name.toLowerCase(),
-			orig = {
-				innerWidth: $.fn.innerWidth,
-				innerHeight: $.fn.innerHeight,
-				outerWidth: $.fn.outerWidth,
-				outerHeight: $.fn.outerHeight
-			};
-
-		function reduce( elem, size, border, margin ) {
-			$.each( side, function() {
-				size -= parseFloat( $.css( elem, "padding" + this ) ) || 0;
-				if ( border ) {
-					size -= parseFloat( $.css( elem, "border" + this + "Width" ) ) || 0;
-				}
-				if ( margin ) {
-					size -= parseFloat( $.css( elem, "margin" + this ) ) || 0;
-				}
-			} );
-			return size;
-		}
-
-		$.fn[ "inner" + name ] = function( size ) {
-			if ( size === undefined ) {
-				return orig[ "inner" + name ].call( this );
-			}
-
-			return this.each( function() {
-				$( this ).css( type, reduce( this, size ) + "px" );
-			} );
-		};
-
-		$.fn[ "outer" + name ] = function( size, margin ) {
-			if ( typeof size !== "number" ) {
-				return orig[ "outer" + name ].call( this, size );
-			}
-
-			return this.each( function() {
-				$( this ).css( type, reduce( this, size, true, margin ) + "px" );
-			} );
-		};
-	} );
-
-	$.fn.addBack = function( selector ) {
-		return this.add( selector == null ?
-			this.prevObject : this.prevObject.filter( selector )
-		);
-	};
-=======
 //>>label: jQuery 1.8+ Support
 //>>group: Core
 //>>description: Support version 1.8.x and newer of jQuery core
@@ -1790,16 +1543,11 @@ if ( !$.fn.even || !$.fn.odd ) {
 			} );
 		}
 	} );
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 }
 
 ;
 /*!
-<<<<<<< HEAD
- * jQuery UI Keycode 1.12.1
-=======
  * jQuery UI Keycode 1.13.1
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1833,24 +1581,9 @@ var keycode = $.ui.keyCode = {
 };
 
 
-<<<<<<< HEAD
 
-
-// Internal use only
-var escapeSelector = $.ui.escapeSelector = ( function() {
-	var selectorEscape = /([!"#$%&'()*+,./:;<=>?@[\]^`{|}~])/g;
-	return function( selector ) {
-		return selector.replace( selectorEscape, "\\$1" );
-	};
-} )();
-
-
-/*!
- * jQuery UI Labels 1.12.1
-=======
 /*!
  * jQuery UI Labels 1.13.1
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1864,12 +1597,6 @@ var escapeSelector = $.ui.escapeSelector = ( function() {
 //>>docs: http://api.jqueryui.com/labels/
 
 
-<<<<<<< HEAD
-
-var labels = $.fn.labels = function() {
-	var ancestor, selector, id, labels, ancestors;
-
-=======
 var labels = $.fn.labels = function() {
 	var ancestor, selector, id, labels, ancestors;
 
@@ -1877,7 +1604,6 @@ var labels = $.fn.labels = function() {
 		return this.pushStack( [] );
 	}
 
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	// Check control.labels first
 	if ( this[ 0 ].labels && this[ 0 ].labels.length ) {
 		return this.pushStack( this[ 0 ].labels );
@@ -1900,11 +1626,8 @@ var labels = $.fn.labels = function() {
 		ancestors = ancestor.add( ancestor.length ? ancestor.siblings() : this.siblings() );
 
 		// Create a selector for the label based on the id
-<<<<<<< HEAD
-		selector = "label[for='" + $.ui.escapeSelector( id ) + "']";
-=======
+
 		selector = "label[for='" + $.escapeSelector( id ) + "']";
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 
 		labels = labels.add( ancestors.find( selector ).addBack( selector ) );
 
@@ -1916,11 +1639,8 @@ var labels = $.fn.labels = function() {
 
 
 /*!
-<<<<<<< HEAD
- * jQuery UI Scroll Parent 1.12.1
-=======
+
  * jQuery UI Scroll Parent 1.13.1
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1933,11 +1653,6 @@ var labels = $.fn.labels = function() {
 //>>description: Get the closest ancestor element that is scrollable.
 //>>docs: http://api.jqueryui.com/scrollParent/
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 var scrollParent = $.fn.scrollParent = function( includeHidden ) {
 	var position = this.css( "position" ),
 		excludeStaticParent = position === "absolute",
@@ -1958,11 +1673,8 @@ var scrollParent = $.fn.scrollParent = function( includeHidden ) {
 
 
 /*!
-<<<<<<< HEAD
- * jQuery UI Tabbable 1.12.1
-=======
+
  * jQuery UI Tabbable 1.13.1
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1974,14 +1686,7 @@ var scrollParent = $.fn.scrollParent = function( includeHidden ) {
 //>>group: Core
 //>>description: Selects elements which can be tabbed to.
 //>>docs: http://api.jqueryui.com/tabbable-selector/
-
-
-<<<<<<< HEAD
-
-var tabbable = $.extend( $.expr[ ":" ], {
-=======
 var tabbable = $.extend( $.expr.pseudos, {
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	tabbable: function( element ) {
 		var tabIndex = $.attr( element, "tabindex" ),
 			hasTabindex = tabIndex != null;
@@ -1991,11 +1696,7 @@ var tabbable = $.extend( $.expr.pseudos, {
 
 
 /*!
-<<<<<<< HEAD
- * jQuery UI Unique ID 1.12.1
-=======
  * jQuery UI Unique ID 1.13.1
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -2008,11 +1709,6 @@ var tabbable = $.extend( $.expr.pseudos, {
 //>>description: Functions to generate and remove uniqueId's
 //>>docs: http://api.jqueryui.com/uniqueId/
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 var uniqueId = $.fn.extend( {
 	uniqueId: ( function() {
 		var uuid = 0;
@@ -2035,21 +1731,12 @@ var uniqueId = $.fn.extend( {
 	}
 } );
 
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 // This file is deprecated
 var ie = $.ui.ie = !!/msie [\w.]+/.exec( navigator.userAgent.toLowerCase() );
 
 /*!
-<<<<<<< HEAD
- * jQuery UI Mouse 1.12.1
-=======
+
  * jQuery UI Mouse 1.13.1
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -2062,22 +1749,13 @@ var ie = $.ui.ie = !!/msie [\w.]+/.exec( navigator.userAgent.toLowerCase() );
 //>>description: Abstracts mouse-based interactions to assist in creating certain widgets.
 //>>docs: http://api.jqueryui.com/mouse/
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 var mouseHandled = false;
 $( document ).on( "mouseup", function() {
 	mouseHandled = false;
 } );
 
 var widgetsMouse = $.widget( "ui.mouse", {
-<<<<<<< HEAD
-	version: "1.12.1",
-=======
 	version: "1.13.1",
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	options: {
 		cancel: "input, textarea, button, select, option",
 		distance: 1,
@@ -2122,13 +1800,10 @@ var widgetsMouse = $.widget( "ui.mouse", {
 		this._mouseMoved = false;
 
 		// We may have missed mouseup (out of window)
-<<<<<<< HEAD
-		( this._mouseStarted && this._mouseUp( event ) );
-=======
+
 		if ( this._mouseStarted ) {
 			this._mouseUp( event );
 		}
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 
 		this._mouseDownEvent = event;
 
@@ -2221,15 +1896,12 @@ var widgetsMouse = $.widget( "ui.mouse", {
 		if ( this._mouseDistanceMet( event ) && this._mouseDelayMet( event ) ) {
 			this._mouseStarted =
 				( this._mouseStart( this._mouseDownEvent, event ) !== false );
-<<<<<<< HEAD
-			( this._mouseStarted ? this._mouseDrag( event ) : this._mouseUp( event ) );
-=======
+
 			if ( this._mouseStarted ) {
 				this._mouseDrag( event );
 			} else {
 				this._mouseUp( event );
 			}
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 		}
 
 		return !this._mouseStarted;
@@ -2276,21 +1948,12 @@ var widgetsMouse = $.widget( "ui.mouse", {
 	_mouseStart: function( /* event */ ) {},
 	_mouseDrag: function( /* event */ ) {},
 	_mouseStop: function( /* event */ ) {},
-<<<<<<< HEAD
-	_mouseCapture: function( /* event */ ) { return true; }
-=======
+
 	_mouseCapture: function( /* event */ ) {
 		return true;
 	}
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 } );
 
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 // $.ui.plugin is deprecated. Use $.widget() extensions instead.
 var plugin = $.ui.plugin = {
 	add: function( module, option, set ) {
@@ -2365,11 +2028,8 @@ var safeBlur = $.ui.safeBlur = function( element ) {
 
 
 /*!
-<<<<<<< HEAD
- * jQuery UI Draggable 1.12.1
-=======
+
  * jQuery UI Draggable 1.13.1
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -2385,14 +2045,8 @@ var safeBlur = $.ui.safeBlur = function( element ) {
 //>>css.structure: ../../themes/base/draggable.css
 
 
-<<<<<<< HEAD
-
-$.widget( "ui.draggable", $.ui.mouse, {
-	version: "1.12.1",
-=======
 $.widget( "ui.draggable", $.ui.mouse, {
 	version: "1.13.1",
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	widgetEventPrefix: "drag",
 	options: {
 		addClasses: true,
@@ -2556,13 +2210,10 @@ $.widget( "ui.draggable", $.ui.mouse, {
 		this.originalPageY = event.pageY;
 
 		//Adjust the mouse offset relative to the helper if "cursorAt" is supplied
-<<<<<<< HEAD
-		( o.cursorAt && this._adjustOffsetFromHelper( o.cursorAt ) );
-=======
+
 		if ( o.cursorAt ) {
 			this._adjustOffsetFromHelper( o.cursorAt );
 		}
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 
 		//Set a containment if given in the options
 		this._setContainment();
@@ -2657,11 +2308,8 @@ $.widget( "ui.draggable", $.ui.mouse, {
 
 		if ( ( this.options.revert === "invalid" && !dropped ) ||
 				( this.options.revert === "valid" && dropped ) ||
-<<<<<<< HEAD
-				this.options.revert === true || ( $.isFunction( this.options.revert ) &&
-=======
+
 				this.options.revert === true || ( typeof this.options.revert === "function" &&
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 				this.options.revert.call( this.element, dropped ) )
 		) {
 			$( this.helper ).animate(
@@ -2733,11 +2381,8 @@ $.widget( "ui.draggable", $.ui.mouse, {
 	_createHelper: function( event ) {
 
 		var o = this.options,
-<<<<<<< HEAD
-			helperIsFunction = $.isFunction( o.helper ),
-=======
+
 			helperIsFunction = typeof o.helper === "function",
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 			helper = helperIsFunction ?
 				$( o.helper.apply( this.element[ 0 ], [ event ] ) ) :
 				( o.helper === "clone" ?
@@ -2776,11 +2421,8 @@ $.widget( "ui.draggable", $.ui.mouse, {
 		if ( typeof obj === "string" ) {
 			obj = obj.split( " " );
 		}
-<<<<<<< HEAD
-		if ( $.isArray( obj ) ) {
-=======
+
 		if ( Array.isArray( obj ) ) {
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 			obj = { left: +obj[ 0 ], top: +obj[ 1 ] || 0 };
 		}
 		if ( "left" in obj ) {
@@ -3489,21 +3131,15 @@ $.ui.plugin.add( "draggable", "snap", {
 					!$.contains( inst.snapElements[ i ].item.ownerDocument,
 					inst.snapElements[ i ].item ) ) {
 				if ( inst.snapElements[ i ].snapping ) {
-<<<<<<< HEAD
-					( inst.options.snap.release &&
-=======
+
 					if ( inst.options.snap.release ) {
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 						inst.options.snap.release.call(
 							inst.element,
 							event,
 							$.extend( inst._uiHash(), { snapItem: inst.snapElements[ i ].item } )
-<<<<<<< HEAD
-						) );
-=======
+
 						);
 					}
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 				}
 				inst.snapElements[ i ].snapping = false;
 				continue;
@@ -3574,22 +3210,16 @@ $.ui.plugin.add( "draggable", "snap", {
 			}
 
 			if ( !inst.snapElements[ i ].snapping && ( ts || bs || ls || rs || first ) ) {
-<<<<<<< HEAD
-				( inst.options.snap.snap &&
-=======
+
 				if ( inst.options.snap.snap ) {
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 					inst.options.snap.snap.call(
 						inst.element,
 						event,
 						$.extend( inst._uiHash(), {
 							snapItem: inst.snapElements[ i ].item
-<<<<<<< HEAD
-						} ) ) );
-=======
+
 						} ) );
 				}
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 			}
 			inst.snapElements[ i ].snapping = ( ts || bs || ls || rs || first );
 
@@ -3607,13 +3237,10 @@ $.ui.plugin.add( "draggable", "stack", {
 					( parseInt( $( b ).css( "zIndex" ), 10 ) || 0 );
 			} );
 
-<<<<<<< HEAD
-		if ( !group.length ) { return; }
-=======
+
 		if ( !group.length ) {
 			return;
 		}
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 
 		min = parseInt( $( group[ 0 ] ).css( "zIndex" ), 10 ) || 0;
 		$( group ).each( function( i ) {
@@ -3646,11 +3273,8 @@ var widgetsDraggable = $.ui.draggable;
 
 
 /*!
-<<<<<<< HEAD
- * jQuery UI Droppable 1.12.1
-=======
+
  * jQuery UI Droppable 1.13.1
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -3665,14 +3289,8 @@ var widgetsDraggable = $.ui.draggable;
 //>>demos: http://jqueryui.com/droppable/
 
 
-<<<<<<< HEAD
-
-$.widget( "ui.droppable", {
-	version: "1.12.1",
-=======
 $.widget( "ui.droppable", {
 	version: "1.13.1",
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	widgetEventPrefix: "drop",
 	options: {
 		accept: "*",
@@ -3697,11 +3315,8 @@ $.widget( "ui.droppable", {
 		this.isover = false;
 		this.isout = true;
 
-<<<<<<< HEAD
-		this.accept = $.isFunction( accept ) ? accept : function( d ) {
-=======
+
 		this.accept = typeof accept === "function" ? accept : function( d ) {
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 			return d.is( accept );
 		};
 
@@ -3724,13 +3339,10 @@ $.widget( "ui.droppable", {
 
 		this._addToManager( o.scope );
 
-<<<<<<< HEAD
-		o.addClasses && this._addClass( "ui-droppable" );
-=======
+
 		if ( o.addClasses ) {
 			this._addClass( "ui-droppable" );
 		}
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 
 	},
 
@@ -3759,11 +3371,8 @@ $.widget( "ui.droppable", {
 	_setOption: function( key, value ) {
 
 		if ( key === "accept" ) {
-<<<<<<< HEAD
-			this.accept = $.isFunction( value ) ? value : function( d ) {
-=======
+
 			this.accept = typeof value === "function" ? value : function( d ) {
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 				return d.is( value );
 			};
 		} else if ( key === "scope" ) {
@@ -3853,23 +3462,17 @@ $.widget( "ui.droppable", {
 					inst.accept.call(
 						inst.element[ 0 ], ( draggable.currentItem || draggable.element )
 					) &&
-<<<<<<< HEAD
-					intersect(
-=======
+
 					$.ui.intersect(
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 						draggable,
 						$.extend( inst, { offset: inst.element.offset() } ),
 						inst.options.tolerance, event
 					)
 				) {
 					childrenIntersection = true;
-<<<<<<< HEAD
-					return false; }
-=======
+
 					return false;
 				}
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 			} );
 		if ( childrenIntersection ) {
 			return false;
@@ -3898,11 +3501,8 @@ $.widget( "ui.droppable", {
 	},
 
 	// Extension points just to make backcompat sane and avoid duplicating logic
-<<<<<<< HEAD
-	// TODO: Remove in 1.13 along with call to it below
-=======
+
 	// TODO: Remove in 1.14 along with call to it below
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	_addHoverClass: function() {
 		this._addClass( "ui-droppable-hover" );
 	},
@@ -3920,11 +3520,7 @@ $.widget( "ui.droppable", {
 	}
 } );
 
-<<<<<<< HEAD
-var intersect = $.ui.intersect = ( function() {
-=======
 $.ui.intersect = ( function() {
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	function isOverAxis( x, reference, size ) {
 		return ( x >= reference ) && ( x < ( reference + size ) );
 	}
@@ -4032,11 +3628,8 @@ $.ui.ddmanager = {
 				return;
 			}
 			if ( !this.options.disabled && this.visible &&
-<<<<<<< HEAD
-					intersect( draggable, this, this.options.tolerance, event ) ) {
-=======
+
 					$.ui.intersect( draggable, this, this.options.tolerance, event ) ) {
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 				dropped = this._drop.call( this, event ) || dropped;
 			}
 
@@ -4077,11 +3670,8 @@ $.ui.ddmanager = {
 			}
 
 			var parentInstance, scope, parent,
-<<<<<<< HEAD
-				intersects = intersect( draggable, this, this.options.tolerance, event ),
-=======
+
 				intersects = $.ui.intersect( draggable, this, this.options.tolerance, event ),
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 				c = !intersects && this.isover ?
 					"isout" :
 					( intersects && !this.isover ? "isover" : null );
@@ -4175,11 +3765,8 @@ var widgetsDroppable = $.ui.droppable;
 
 
 /*!
-<<<<<<< HEAD
- * jQuery UI Resizable 1.12.1
-=======
+
  * jQuery UI Resizable 1.13.1
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -4197,14 +3784,8 @@ var widgetsDroppable = $.ui.droppable;
 //>>css.theme: ../../themes/base/theme.css
 
 
-<<<<<<< HEAD
-
-$.widget( "ui.resizable", $.ui.mouse, {
-	version: "1.12.1",
-=======
 $.widget( "ui.resizable", $.ui.mouse, {
 	version: "1.13.1",
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	widgetEventPrefix: "resize",
 	options: {
 		alsoResize: false,
@@ -4259,11 +3840,7 @@ $.widget( "ui.resizable", $.ui.mouse, {
 		// TODO: determine which cases actually cause this to happen
 		// if the element doesn't have the scroll set, see if it's possible to
 		// set the scroll
-<<<<<<< HEAD
-		el[ scroll ] = 1;
-		has = ( el[ scroll ] > 0 );
-		el[ scroll ] = 0;
-=======
+
 		try {
 			el[ scroll ] = 1;
 			has = ( el[ scroll ] > 0 );
@@ -4273,7 +3850,6 @@ $.widget( "ui.resizable", $.ui.mouse, {
 			// `el` might be a string, then setting `scroll` will throw
 			// an error in strict mode; ignore it.
 		}
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 		return has;
 	},
 
@@ -4296,12 +3872,9 @@ $.widget( "ui.resizable", $.ui.mouse, {
 		if ( this.element[ 0 ].nodeName.match( /^(canvas|textarea|input|select|button|img)$/i ) ) {
 
 			this.element.wrap(
-<<<<<<< HEAD
-				$( "<div class='ui-wrapper' style='overflow: hidden;'></div>" ).css( {
-=======
+
 				$( "<div class='ui-wrapper'></div>" ).css( {
 					overflow: "hidden",
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 					position: this.element.css( "position" ),
 					width: this.element.outerWidth(),
 					height: this.element.outerHeight(),
@@ -4372,23 +3945,16 @@ $.widget( "ui.resizable", $.ui.mouse, {
 	_destroy: function() {
 
 		this._mouseDestroy();
-<<<<<<< HEAD
-=======
+
 		this._addedHandles.remove();
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 
 		var wrapper,
 			_destroy = function( exp ) {
 				$( exp )
 					.removeData( "resizable" )
 					.removeData( "ui-resizable" )
-<<<<<<< HEAD
-					.off( ".resizable" )
-					.find( ".ui-resizable-handle" )
-						.remove();
-=======
+
 					.off( ".resizable" );
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 			};
 
 		// TODO: Unwrap at same DOM position
@@ -4419,12 +3985,10 @@ $.widget( "ui.resizable", $.ui.mouse, {
 			this._removeHandles();
 			this._setupHandles();
 			break;
-<<<<<<< HEAD
-=======
+
 		case "aspectRatio":
 			this._aspectRatio = !!value;
 			break;
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 		default:
 			break;
 		}
@@ -4446,10 +4010,7 @@ $.widget( "ui.resizable", $.ui.mouse, {
 				} );
 
 		this._handles = $();
-<<<<<<< HEAD
-=======
 		this._addedHandles = $();
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 		if ( this.handles.constructor === String ) {
 
 			if ( this.handles === "all" ) {
@@ -4461,11 +4022,7 @@ $.widget( "ui.resizable", $.ui.mouse, {
 
 			for ( i = 0; i < n.length; i++ ) {
 
-<<<<<<< HEAD
-				handle = $.trim( n[ i ] );
-=======
 				handle = String.prototype.trim.call( n[ i ] );
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 				hname = "ui-resizable-" + handle;
 				axis = $( "<div>" );
 				this._addClass( axis, "ui-resizable-handle " + hname );
@@ -4473,14 +4030,10 @@ $.widget( "ui.resizable", $.ui.mouse, {
 				axis.css( { zIndex: o.zIndex } );
 
 				this.handles[ handle ] = ".ui-resizable-" + handle;
-<<<<<<< HEAD
-				this.element.append( axis );
-=======
 				if ( !this.element.children( this.handles[ handle ] ).length ) {
 					this.element.append( axis );
 					this._addedHandles = this._addedHandles.add( axis );
 				}
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 			}
 
 		}
@@ -4546,11 +4099,8 @@ $.widget( "ui.resizable", $.ui.mouse, {
 	},
 
 	_removeHandles: function() {
-<<<<<<< HEAD
 		this._handles.remove();
-=======
 		this._addedHandles.remove();
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 	},
 
 	_mouseCapture: function( event ) {
@@ -4930,11 +4480,7 @@ $.widget( "ui.resizable", $.ui.mouse, {
 
 		if ( this._helper ) {
 
-<<<<<<< HEAD
-			this.helper = this.helper || $( "<div style='overflow:hidden;'></div>" );
-=======
 			this.helper = this.helper || $( "<div></div>" ).css( { overflow: "hidden" } );
->>>>>>> 95be142b0fa639347854aef90afa9602b8313d51
 
 			this._addClass( this.helper, this._helper );
 			this.helper.css( {
